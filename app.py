@@ -6,8 +6,8 @@ import dash_html_components as html
 import plotly.graph_objs as go
 import flask
 
-server = flask.Flask(__name__)
-app = dash.Dash(__name__, server=server)
+app = dash.Dash(__name__)
+server = app.server 
 
 
 app.layout = html.Div(children=[
