@@ -1,10 +1,13 @@
+import os 
 import dash
+import dash-renderer
 import dash_core_components as dcc
 import dash_html_components as html
 import plotly.graph_objs as go
+import flask
 
-
-app = dash.Dash()
+server = flask.Flask(__name__)
+app = dash.Dash(__name__, server=server)
 
 
 app.layout = html.Div(children=[
